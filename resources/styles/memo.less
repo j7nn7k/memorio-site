@@ -1,0 +1,149 @@
+/* Variables
+-------------------------------------------------- */
+@brand-main-color-1: #3498db;
+@brand-main-color-2: #FA6900;
+@brand-highlight-color: #A7DBD8;
+@brand-background-color: #E0E4CC;
+
+//BS overrides
+@link-color: @brand-main-color-1;
+@brand-primary: @brand-main-color-1;
+//@icon-font-path: "../libs/bootstrap/fonts/"; //TODO leave this until a fix from font awesome arrives
+
+/*color palettes*/
+
+//http://www.colourlovers.com/palette/92095/Giant_Goldfish
+//http://flatuicolors.com/
+
+// All colors of the palette
+//@hhh: #69D2E7;
+//@hhh: #A7DBD8;
+//@hhh: #E0E4CC;
+//@hhh: #F38630;
+//@hhh: #FA6900;
+
+
+/* Base
+-------------------------------------------------- */
+
+//.btn-action {
+//  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+//}
+.btn-action {
+  .button-variant(white; @brand-main-color-2; @brand-main-color-2);
+}
+
+/* Site-wide elements
+-------------------------------------------------- */
+.handwriting{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: transparent;
+  // shw the toggle on white background
+  .navbar-toggle .icon-bar{
+    background-color: @brand-main-color-1;
+  }
+}
+
+.navbar-brand {
+  color: @brand-main-color-1;
+}
+
+#page-header {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: @brand-main-color-1;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.well{
+ .box-shadow(inherit);
+}
+
+//used for text which should not disturb
+.text-do-not-disturb {
+  color: lighten(@text-color, 25%);
+}
+
+/* Sticky footer styles */
+
+@footer-height: 200px;
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -@footer-height;
+  /* Pad bottom by footer height */
+  padding: 0 0 @footer-height;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  border-top: 1px solid @gray-lighter;
+  height: @footer-height;
+  margin-top: 50px;
+  padding-top: @footer-height * 0.15;
+  padding-bottom: @footer-height * 0.3;
+}
+
+/* Home
+-------------------------------------------------- */
+
+/* Homepage masthead
+-------------------------------------------------- */
+
+.masthead {
+//  background: url(/static/img/home-background.jpg) no-repeat top left;
+  padding-top: 30px;
+  background-color: @brand-background-color;
+  text-align: center;
+//  min-height: 500px;
+  margin-bottom: 40px;
+}
+
+
+/* Listings
+-------------------------------------------------- */
+
+.listing-wrapper {
+  border: 1px solid @gray-lighter;
+  padding: 15px;
+  margin-bottom: 20px;
+  h3 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+}
+
+.add-listing-button {
+  margin-bottom: 15px;
+}
+
+.listing-image-gallery {
+  margin-bottom: 20px;
+}
+
+.listing-description {
+  margin-bottom: 20px;
+}
+
+/* Closed area
+-------------------------------------------------- */
+
+.sidenav {
+  margin-bottom: 20px;
+}

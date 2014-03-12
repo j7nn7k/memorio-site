@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+
+    <title>{% if page.title %}{{ page.title }}{% else %}Jannik's personal Website{% endif %} - Memorio - Einfache
+        Benachrichtigung für alle Arten von Unternehmen</title>
+    <link href="/css/main.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+<div id="wrap">
+    <header class="navbar navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><i class="fa fa-comments"></i> Memorio</a>
+            </div>
+
+            <nav class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" class="btn btn-action">Kostenlos testen</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {{ content }}
+</div>
+<!-- / #wrap for sticky footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <p>Need help or have feedback? We would like to hear from you!</p>
+
+                <p><a href="mailto:jannikweyrich@gmail.com">Contact us</a>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <p class="pull-right"><a href="/privacy-policy">Privacy policy /
+                    Impressum</a> &middot; &copy; 2014 Memorio</p>
+
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- JavaScript plugins (requires jQuery) -->
+<!-- <script src="http://code.jquery.com/jquery.js"></script> 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+-->
+
+<script src="/libs/jquery/jquery-2.1.0.min.js"></script>
+<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+<!--
+<script>
+
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+-->
+
+</body>
+</html>
