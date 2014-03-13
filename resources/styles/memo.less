@@ -1,9 +1,11 @@
 /* Variables
 -------------------------------------------------- */
-@brand-main-color-1: #3498db;
+@brand-main-color-1: #2980b9;
 @brand-main-color-2: #FA6900;
 @brand-highlight-color: #A7DBD8;
 @brand-background-color: #E0E4CC;
+@brand-background-color-light: #FBFCF7;
+@brand-background-color-border: #EFF2E4;
 
 /*color palettes*/
 
@@ -24,7 +26,16 @@
 /* Navbar */
 
 @navbar-height: 70px;
-@navbar-margin-bottom: 30px;
+
+// fix padding of normal navi links
+.navbar-nav>li>a, button.navbar-toggle {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+//@navbar-margin-bottom: 30px;
 
 /* Base
 -------------------------------------------------- */
@@ -33,12 +44,14 @@
 //  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
 //}
 .btn-action {
-  .button-variant(white; @brand-main-color-2; @brand-main-color-2);
+  .button-variant(white;
+@brand-main-color-2;
+@brand-main-color-2);
 }
 
 /* Site-wide elements
 -------------------------------------------------- */
-.handwriting{
+.handwriting {
   font-family: 'Shadows Into Light', cursive;
 }
 
@@ -46,7 +59,7 @@
   margin-bottom: 0px;
   background-color: transparent;
   // shw the toggle on white background
-  .navbar-toggle .icon-bar{
+  .navbar-toggle .icon-bar {
     background-color: @brand-main-color-1;
   }
 }
@@ -54,6 +67,7 @@
 .navbar-brand {
   color: @brand-main-color-1;
   font-size: 40px;
+  height: inherit;
 }
 
 #page-header {
@@ -65,8 +79,8 @@
   text-align: center;
 }
 
-.well{
- .box-shadow(inherit);
+.well {
+  .box-shadow(inherit);
 }
 
 //used for text which should not disturb
@@ -97,7 +111,6 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  border-top: 1px solid @gray-lighter;
   height: @footer-height;
   margin-top: 50px;
   padding-top: @footer-height * 0.15;
@@ -108,13 +121,25 @@ body {
 -------------------------------------------------- */
 
 /* Homepage masthead
--------------------------------------------------- */
+---------------------*/
 
 .masthead {
-//  background: url(/static/img/home-background.jpg) no-repeat top left;
+  //  background: url(/static/img/home-background.jpg) no-repeat top left;
   padding-top: 30px;
   background-color: @brand-background-color;
-  text-align: center;
-//  min-height: 500px;
-  margin-bottom: 40px;
+  border-bottom: 3px solid @brand-background-color-border;
+}
+
+/* Misc
+-------------------------------------------------- */
+
+.striped-section-wrapper {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  section:nth-child(even) {
+    background-color: @brand-background-color-light;
+    border-bottom: 3px solid @brand-background-color-border;
+  }
 }
