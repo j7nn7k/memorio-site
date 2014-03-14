@@ -6,4 +6,4 @@ permalink: /blog/:year/:month/:day/:title
 redcarpet:
   extensions: [autolink]
 
-exclude: [README.md, resources, node_modules, Gulpfile.js, package.json]
+exclude: [README.md, resources, node_modules, Gulpfile.js, package.json, npm-debug.log]
