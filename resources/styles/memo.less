@@ -7,10 +7,12 @@
 @brand-background-color-light: #FBFCF7;
 @brand-background-color-border: #EFF2E4;
 
+
 /*color palettes*/
 
 //http://www.colourlovers.com/palette/92095/Giant_Goldfish
 //http://flatuicolors.com/
+//http://bootflat.github.io/documentation.html
 
 // All colors of the palette
 //@hhh: #69D2E7;
@@ -39,7 +41,9 @@
 -------------------------------------------------- */
 
 .btn-action {
-  .button-variant(white;@brand-main-color-2;@brand-main-color-2);
+  .button-variant(white;
+@brand-main-color-2;
+@brand-main-color-2);
 }
 
 /* Site-wide elements
@@ -61,6 +65,10 @@
   color: @brand-main-color-1;
   font-size: 40px;
   height: inherit;
+}
+
+.fa-li.fa-check {
+  color: #A0D468;
 }
 
 //.well {
@@ -108,12 +116,18 @@ body {
 ---------------------*/
 
 .masthead {
-  //  background: url(/static/img/home-background.jpg) no-repeat top left;
-  padding-top: 30px;
+  background: url(/img/masthead-pattern.jpg) repeat top left;
+  padding-top: 0;
   background-color: @brand-background-color;
-  border-bottom: 3px solid @brand-background-color-border;
   h1 {
     font-size: 32px;
+  }
+}
+
+.how-it-works {
+  img {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -141,6 +155,28 @@ body {
   .masthead {
     h1 {
       font-size: 26px;
+    }
+  }
+}
+
+/* Split Testing
+-------------------------------------------------- */
+
+html {
+  .visible-v2, .visible-v3, .visible-v4 {
+    display: none;
+  }
+  &.v1 {
+    .visible-v1 {
+      display: inherit;
+    }
+  }
+  &.v2 {
+    .visible-v2 {
+      display: inherit;
+    }
+    .visible-v1, .visible-v3, .visible-v4 {
+      display: none !important;
     }
   }
 }

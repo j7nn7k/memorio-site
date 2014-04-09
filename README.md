@@ -7,4 +7,4 @@
 
 
 # Deploy site to uberspace
-scp -rp ~/Documents/Coding/Ruby/memorio-site/_site flpa@hercules.uberspace.de:~/html/memorio-site/
+scp -rp ~/Documents/Coding/Ruby/memorio-site/_site/* flpa@hercules.uberspace.de:~/html/
