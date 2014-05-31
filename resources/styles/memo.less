@@ -42,8 +42,8 @@
 
 .btn-action {
   .button-variant(white;
-@brand-main-color-2;
-@brand-main-color-2);
+  @brand-main-color-2;
+  @brand-main-color-2);
 }
 
 /* Site-wide elements
@@ -70,10 +70,6 @@
 .fa-li.fa-check {
   color: #A0D468;
 }
-
-//.well {
-//  .box-shadow(inherit);
-//}
 
 //used for text which should not disturb
 .text-do-not-disturb {
@@ -139,13 +135,21 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  section:nth-child(even) {
-    background-color: @brand-background-color-light;
-    border-bottom: 3px solid @brand-background-color-border;
+  &.regular section:nth-child(even) {
+    background-color: @brand-background-color-border;
+  }
+  &.reverse section:nth-child(odd) {
+    background-color: @brand-background-color-border;
   }
   .img-circle {
     border: 3px solid #eff2e4;
   }
+}
+
+.research-anouncemet {
+  background-color: @brand-background-color-border;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 /* Responsive Stuff
@@ -177,6 +181,16 @@ html {
     }
     .visible-v1, .visible-v3, .visible-v4 {
       display: none !important;
+    }
+  }
+}
+
+/* Pricing
+-------------------------------------------------- */
+@media (min-width: @screen-sm-min) {
+  .pricing {
+    .panel-body {
+      min-height: 280px;
     }
   }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Egal ob über SMS, E-Mail oder per Post. Mit Memorio sendet senden Sie schnell und einfach in individuellen Abständen Terminerinnerungen an Ihre Patienten">
     <meta name="author" content="">
 
     <link rel="shortcut icon" href="/img/favicon.ico"/>
@@ -12,11 +12,7 @@
         {% if page.master_title %}
             {{ page.master_title }}
         {% else %}
-            {% if page.title %}
-                {{ page.title }} - Memorio - Senden Sie automatische Benachrichtigungen an Ihre Kunden
-            {% else %}
-                Memorio - Einfache Benachrichtigung für alle Arten von Unternehmen
-            {% endif %}
+            {% if page.title %}{{ page.title }} - {% endif %} Memorio - Senden Sie automatische Benachrichtigungen an Ihre Kunden
         {% endif %}
     </title>
     <link href="/css/main.css" rel="stylesheet" media="screen">
@@ -42,8 +38,10 @@
                 <ul class="nav navbar-nav">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                    </li>
+                    <li><a href="/features/">Funktionen</a></li>
+                    <li><a href="/pricing/">Preise</a></li>
+                    <li><a href="/contact/">Kontakt</a></li>
+                    <li><a href="http://eepurl.com/ShBZj">Anmeldung</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +50,6 @@
     {{ content }}
 
 </div>
-<!-- / #wrap for sticky footer -->
 <footer id="footer">
     <div class="container">
         <div class="row">
