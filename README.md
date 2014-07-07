@@ -9,4 +9,4 @@
 * jekyll serve
 
 # Deploy site to uberspace
-scp -rp ~/Documents/Coding/Ruby/memorio-site/_site/* flpa@hercules.uberspace.de:~/html/
+`scp -rp ~/Documents/Coding/Ruby/memorio-site/_site/* flpa@hercules.uberspace.de:~/html/`
